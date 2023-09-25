@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Enfocers</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/27a23aa3d4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!--header section---->
+
+	<header>
+
+		<input type="checkbox" name="" id="toggler">
+		<label for="toggler" class="fas fa-bars"></label>
+		<div class="logo">
+
+		</div>
+		<nav class="navbar">
+			<a href="#home">home</a>
+			<a href="aboutus.html">about-us</a>
+			<a href="#servics">services</a>
+			<a href="agentlogin.html">agent-login</a>
+			<a href="#contact">contact-us</a>
+
+		</nav>
+		<div class="icons">
+
+			<a href="userlogin.html" class="btn">login</a>
+
+
+		</div>
+
+
+		</div>
+	</header>
+
+
+	<section class="home" id="home">
+		<div class="text-box">
+			<h1>Unite in Crisis</h1>
+			<p>Wide aerial view of a city. The sky is grey, and a storm approaches.<br> Thunder rumbles in the distance.
+				The camera zooms in on<br> the Ministry of Home Affairs building.In a world where disasters,<br> both
+				natural and man-made, cast a dark shadow over our lives...
+
+			</p>
+
+		</div>
+
+
+
+
+
+	</section>
+
+	<section class="about" id="about">
+		<h1 class="heading">our vision</h1>
+		<div class="row">
+			<div class="video-container">
+				<video controls autoplay muted>
+					<source src="video.mp4" type="video/mp4">
+
+
+				</video>
+				<!--<h3>best flower sellers</h3>-->
+			</div>
+			<div class="content">
+				<h3>what is Enfocers?</h3>
+				<p>Enfocers is a disaster management website that merges all rescue departments into one platform. We
+					provide a comprehensive and coordinated response to disasters, from prevention to recovery. Our team
+					of experts is available 24/7 to help you stay safe and informed in the event of a disaster.
+
+					We offer a variety of services, including:
+
+					• Disaster prevention: We provide education and resources to help you prepare for and prevent
+					disasters.
+					• Disaster preparedness: We develop and implement disaster preparedness plans, including evacuation
+					plans and emergency communication systems.
+					• Disaster response: We coordinate the response to disasters, including search and rescue, medical
+					assistance, and evacuation.
+					. </p>
+
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="campus" id="servics">
+		<h1 class="heading">services</h1>
+
+
+		<div class="arc">
+			<div class="campus-col">
+
+				<div class="layer">
+					<h3>Fire Brigade</h3>
+				</div>
+			</div>
+			<div class="campus-aa">
+
+				<div class="layer">
+					<h3>Ambulance</h3>
+				</div>
+			</div>
+			<div class="campus-bb">
+
+				<div class="layer">
+					<h3>Flood Rescue</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="contact" id="contact">
+		<h1 class="heading"><span>contact</span>
+			us</h1>
+		<div class="row">
+			<form action="">
+				<input type="text" placeholder="name" class="box">
+				<input type="email" placeholder="email" class="box">
+				<input type="number" placeholder="number" class="box">
+				<textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+				<input type="submit" value="send message" class="btn">
+			</form>
+			<div class="image">
+				<img src="img8.jpg">
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="footer">
+		<div class="box-container">
+
+			<div class="box">
+				<h3>quick links</h3>
+				<a href="#home">home</a>
+				<a href="aboutus.html">about-us</a>
+				<a href="#servics">services</a>
+				<a href="#contact">feedback</a>
+				<a href="#contact">contact</a>
+
+			</div>
+			<div class="box">
+				<h3>extra links</h3>
+				<a href="userlogin.html">user login</a>
+				<a href="userlogin.html">user sign up</a>
+				<a href="agentlogin.html">agencies login</a>
+				<a href="agentlogin.html">agencies sign up</a>
+				<a href="#contact">contact</a>
+			</div>
+
+
+			<div class="box">
+				<h3>locations</h3>
+				<a href="#">india</a>
+				<a href="#">west bengal</a>
+				<a href="#">uttar pradesh</a>
+				<a href="#">delhi</a>
+
+
+			</div>
+
+			<div class="box">
+				<h3>contact info</h3>
+				<a href="#">+91 62000000</a>
+				<a href="#">Enfocers@gmail.com</a>
+				<a href="#">kolkata,India-700039</a>
+
+
+			</div>
+		</div>
+		<div class="credit">
+			created by <span>Enfocers Team</span>
+
+		</div>
+
+	</section>
+
+	<script>
+		let slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			let slides = document.querySelectorAll('.slide');
+			for (let i = 0; i < slides.length; i++) {
+				slides[i].style.display = 'none';
+			}
+
+			slideIndex++;
+
+			if (slideIndex > slides.length) {
+				slideIndex = 1;
+			}
+		}
+	</script>
+
+	<script type="text/javascript">
+		const menubtn = document.querySelector(".menu-btn");
+		const navLinks = document.querySelector(".nav-links");
+		const links = document.querySelectorAll(".nav-links li");
+		menubtn.addEventListener("click", () => {
+			navLinks.classList.toggle("mobile-menu");
+		});
+		links.forEach(link => {
+			link.firstChild.addEventListener('click', () => {
+				navLinks.classList.toggle('open');
+			});
+		});
+	</script>
+	</script>
+
+
+
+</body>
+
+</html>

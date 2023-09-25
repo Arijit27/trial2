@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Details</title>
+    <style>
+       
+
+
+
+
+/* Apply some basic styles to the container */
+.container {
+  margin: 20px auto;
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style table headers */
+th {
+  background-color: #4299e1;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Style table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style table cells */
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Add some space between table cells */
+td:first-child {
+  width: 30%;
+  font-weight: bold;
+}
+
+/* Style alternating rows */
+tr:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+/* Add hover effect to rows */
+tr:hover {
+  background-color: #ddd;
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <table>
+          <tr>
+            <th rowspan="1" colspan="2"> Agency Details</th>
+            
+          </tr>
+          <% for (const key in mainData) { %>
+            <tr>
+              <td><%= key %></td>
+              <td><%= mainData[key] %></td>
+            </tr>
+          <% } %>
+        </table>
+      </div>
+
+
+      
+</body>
+</html>

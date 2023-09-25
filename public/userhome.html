@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home</title>
+    <!-- Link to Bootstrap CSS (ensure you have Bootstrap CSS linked) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles for the form */
+       
+
+        .custom-logo {
+            max-width: 100px;
+            margin-left: 15px;
+            border-radius: 50%;
+        }
+
+        .blur-bg {
+            background-image: url('after-disaster-search-rescue-through-building-rubble-generate-ai_905417-5222.avif');
+            background-size: cover;
+
+        }
+
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .form-border {
+            /* border: 2px solid #3498db; */
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .form-border:hover {
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-control {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: none;
+        }
+
+        .form-control:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            border: none;
+
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .custom-logo {
+                max-width: 80px;
+                margin-left: 10px;
+            }
+
+            .logout-btn {
+                top: -60px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body class="blur-bg">
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <!-- Logo in the left corner -->
+                <img src="WhatsApp Image 2023-09-20 at 23.05.46.jpg" alt="Logo" class="custom-logo">
+            </div>
+            <div class="col-md-6">
+                <!-- Logout button in the right corner -->
+                <button class="btn btn-danger logout-btn" id="openBtn5" type="button">Logout</button>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <!-- Border around the form -->
+                <div class="form-border">
+                    <!-- Form Title -->
+                    <h2 class="form-title">Search Nearest Rescue Agency</h2>
+
+                    <!-- Responsive Form -->
+                    <form action="/getUrgentData" method="get">
+                        <div class="form-group">
+                            <label for="optionDropdown">Select Rescue Agency Type</label>
+                            <select class="form-control" id="optionDropdown" name="agency">
+                                <option>Select Agency Type</option>
+                                <option value="fire">Fire Brigade Agency</option>
+                                <option value="flood">Flood Rescue Agency</option>
+                                <option value="electric">Electricity Agency</option>
+                                <option value="police">Police Agency</option>
+                                <option value="ambulance">Ambulance Agency</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode</label>
+                            <input type="text" class="form-control" id="pincode" placeholder="Enter Pincode"
+                                name="pincode">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const openBtn5 = document.getElementById('openBtn5');
+        openBtn5.addEventListener('click', async (e) => {
+            window.location.replace('/logoutuser');
+        })
+    </script>
+    <!-- Link to Bootstrap JS (ensure you have Bootstrap JS linked) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
