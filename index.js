@@ -624,7 +624,7 @@ app.post('/signupagent', async (req, res) => {
 
 //AGENT LOGIN
 app.get("/a.html", function(req, res) {
-  res.redirect('/agent.html');
+  res.sendFile(__dirname + '/public/agent.html');
 });
 app.post('/loginagent', async (req, res) => {
   try {
