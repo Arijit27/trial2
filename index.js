@@ -632,8 +632,11 @@ app.post('/loginagent', async (req, res) => {
     if (user != null) {
       if (user.password === pass) {
         req.session.user = user;
-        res.redirect('/agent.html');
-
+        res.send(`
+        <script>
+          window.location.href = '/agent.html';
+        </script>
+      `);
       }
       else {
         // res.json({ alreadyExists: false });;
