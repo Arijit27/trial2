@@ -623,7 +623,9 @@ app.post('/signupagent', async (req, res) => {
 });
 
 //AGENT LOGIN
-
+app.get("/a.html", function(req, res) {
+  res.redirect('/agent.html');
+});
 app.post('/loginagent', async (req, res) => {
   try {
     const eml = req.body.email;
@@ -632,11 +634,7 @@ app.post('/loginagent', async (req, res) => {
     if (user != null) {
       if (user.password === pass) {
         req.session.user = user;
-        res.send(`
-        <script>
-          window.location.href = '/agent.html';
-        </script>
-      `);
+       res.redirect('/a.html');
       }
       else {
         // res.json({ alreadyExists: false });;
